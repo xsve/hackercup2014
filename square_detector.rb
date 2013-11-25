@@ -8,12 +8,11 @@ def solve(str)
   end
 
   while (!(a[0].include?('#'))) do
-    a = a[1, 2000]
+    a = a.drop(1)
   end
-
   a.reverse!
   while (!(a[0].include?('#'))) do
-    a = a[1, 2000]
+    a = a.drop(1)
   end
 
   return "NO" unless a.uniq.length == 1 # if contains exactly 1 square, all lines will be the same
