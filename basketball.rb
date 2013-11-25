@@ -21,7 +21,7 @@ def solve(str)
 
   final = teams.map{|t| play(t,p,m).map{|r| r[:name]}}
 
-  return final.flatten.sort
+  return final.flatten.sort.join(' ')
 end
 
 def play(t, p, m)
@@ -48,7 +48,6 @@ def play(t, p, m)
   end
 
   return f
-
 end
 
 @f=File.open("input", 'r')
