@@ -4,7 +4,16 @@ def solve(str)
   (0..n).each do |i|
   	s = @f.readline
 
-  	a.push( s.chomp) if s.include?('#') # omit empty lines
+  	a.push s.chomp
+  end
+
+  while (!(a[0].include?('#'))) do
+    a = a[1, 2000]
+  end
+
+  a.reverse!
+  while (!(a[0].include?('#'))) do
+    a = a[1, 2000]
   end
 
   return "NO" unless a.uniq.length == 1 # if contains exactly 1 square, all lines will be the same
