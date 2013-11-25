@@ -8,6 +8,7 @@ def solve(str)
   end
 
   return "NO" unless a.uniq.length == 1 # if contains exactly 1 square, all lines will be the same
+  return "NO" if a[0] =~ /#\.+#/
 
   if a[0].count('#') == a.size
     return "YES" 
